@@ -1,0 +1,1 @@
+I write about machine learning evaluation, the systems that surround models in production, and the research papers behind both, for the person who has to act on a result without reading the paper behind it.

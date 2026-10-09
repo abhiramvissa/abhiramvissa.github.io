@@ -1,8 +1,13 @@
 title: V. Sai Abhiram
-description: Notes on machine learning evaluation, the systems around models in production, and the papers behind both
+tagline: Notes on machine learning evaluation
+description: Notes on machine learning evaluation, the systems around models in production, and the papers behind both.
 author: V. Sai Abhiram
 email: abhiramvissa@gmail.com
+url: https://abhiramvissa.github.io
 github_username: abhiramvissa
 linkedin_username: abhiramvissa
-show_excerpts: true
+research_url: https://github.com/abhiramvissa/clean-orbits-kepler
+permalink: pretty
 theme: minima
+plugins:
+  - jekyll-feed

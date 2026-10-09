@@ -8,12 +8,12 @@ I am V. Sai Abhiram, a computer science graduate and software developer in Hyder
 
 I write here about one question in different forms: whether a number a model produces can be believed, and what it takes to find out. That usually means the evaluation around a model, the systems it runs inside, and the research papers behind both, written for the person who has to act on a result without reading the paper behind it.
 
-**Research**
+## Research
 
 - *Clean Orbits Reward Kepler: Noise and Interventions Shape the World Model a Transformer Learns* (2026, preprint). [Code, results and decision log](https://github.com/abhiramvissa/clean-orbits-kepler).
 - *Disentangling Causality from Correlation in Data-Driven Systems: An Empirical Study of Spurious Associations in Air Quality and Respiratory Health* (2026).
 - *A Structured Survey of Data Analytics Techniques for Predictive Modeling* (2026).
 
-**Elsewhere**
+## Elsewhere
 
 [GitHub](https://github.com/abhiramvissa) · [LinkedIn](https://www.linkedin.com/in/abhiramvissa/) · [abhiramvissa@gmail.com](mailto:abhiramvissa@gmail.com)

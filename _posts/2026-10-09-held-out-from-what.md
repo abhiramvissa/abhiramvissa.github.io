@@ -1,14 +1,11 @@
-Layout
-
-post
-
-Title
-
-Held Out From What? Why Random Test Splits Flatter Your Model
-
-Date
-
-2026-10-09
+---
+layout: post
+title: "Held Out From What? Why Random Test Splits Flatter Your Model"
+date: 2026-10-09
+image: /assets/img/held-out-split.svg
+image_alt: "Two Random Forests on the same Delhi air-quality data: R² 0.9978 under a random split, 0.5510 when trained on winter and tested on the rest of the year."
+image_caption: "Same data, same model, two ways of drawing the line between what the model saw and what it was judged on."
+---
 
 Two numbers from the same study, produced by the same kind of model on the same dataset: an R² of 0.9978 and an R² of 0.5510.
 
@@ -16,9 +13,9 @@ What separates them has nothing to do with the algorithm. Both are Random Forest
 
 The study was mine, published earlier this year, and the confounder was there by design. I built the target, a Respiratory Risk Index, with seasonal weighting deliberately mixed in, so I would know in advance what the model was not supposed to lean on. What I did not anticipate was how completely the standard evaluation would cover for it. Under the shuffle, the model looked close to perfect. It had not learned much about how air quality relates to respiratory risk. It had learned to recognise winter.
 
-That matters well beyond one air quality dataset, because the shuffle is the default. train_test_split in scikit-learn shuffles unless you explicitly stop it, and almost every tutorial you have worked through opens that way. The line of code reads like a formality. It is actually a claim, made on your behalf, about the world the model is going to be dropped into: that the future will be a reshuffled version of the past.
+That matters well beyond one air quality dataset, because the shuffle is the default. `train_test_split` in scikit-learn shuffles unless you explicitly stop it, and almost every tutorial you have worked through opens that way. The line of code reads like a formality. It is actually a claim, made on your behalf, about the world the model is going to be dropped into: that the future will be a reshuffled version of the past.
 
-What the shuffle actually guarantees
+## What the shuffle actually guarantees
 
 A random split draws test rows from precisely the same joint distribution as the training rows. Whatever confounders live in the training data live in the test data too, in roughly the same proportions and standing in the same relationship to the target. That is not a flaw in the procedure. It is the procedure working as designed.
 
@@ -26,7 +23,7 @@ Follow that through with the seasonal case. If winter drives both pollution leve
 
 So held-out data is not really held out. It is held out from the fitting procedure, which protects you against memorising individual rows, and that is a genuine risk worth protecting against. It is not held out from anything else.
 
-This is not a niche worry
+## This is not a niche worry
 
 The cleanest demonstration in the wild comes from John Zech and colleagues, writing in PLOS Medicine in 2018. They trained pneumonia-screening networks on 158,323 chest radiographs drawn from three hospital systems and found external performance lower than internal in three of five comparisons. The detail that explains why sits further down the paper: the networks could identify which hospital system an image came from with better than 99.9 percent accuracy. A model that recognises the hospital can infer that hospital's disease rate without ever attending to a lung.
 
@@ -36,7 +33,7 @@ You do not even need a confounder for the split to flatter you. In 2019, Benjami
 
 When the shift is structural rather than accidental, the gap becomes systematic. The WILDS benchmark, assembled by Pang Wei Koh and a large group of collaborators, gathers ten datasets built around shifts that occur naturally in deployment: different hospitals, camera traps, time periods, countries. Standard training scored substantially worse out-of-distribution than in-distribution on every single one, and the robustness methods available at the time did not close the gap.
 
-Splitting along the thing you are afraid of
+## Splitting along the thing you are afraid of
 
 None of this argues for abandoning held-out evaluation. It argues for choosing the split deliberately instead of inheriting it, and a few habits follow from that.
 
@@ -56,4 +53,6 @@ The second is that a large gap is not by itself a verdict on the model. It can m
 
 Which is the argument, in the end. Any score you publish is a prediction about a situation someone else will be standing in. A random split predicts that tomorrow is a shuffled version of yesterday, and often enough that holds. When it does not, the shuffle will not tell you. It will hand you a number you cannot defend once somebody acts on it.
 
-V. Sai Abhiram is a computer science graduate and software developer based in Hyderabad, working on healthcare technology systems. He writes about machine learning evaluation, the systems that surround models in production, and the research papers behind both. He is the author of two published papers on predictive modelling and spurious correlation in data-driven systems, and of a preprint on the world models transformers learn, with code and results on GitHub.
+---
+
+*V. Sai Abhiram is a computer science graduate and software developer based in Hyderabad, working on healthcare technology systems. He writes about machine learning evaluation, the systems that surround models in production, and the research papers behind both. He is the author of two published papers on predictive modelling and spurious correlation in data-driven systems, and of a preprint on the world models transformers learn, with [code and results on GitHub](https://github.com/abhiramvissa/clean-orbits-kepler).*

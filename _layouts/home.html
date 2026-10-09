@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{{ content }}
+
+<section class="posts">
+  <h2 class="section-title">Writing</h2>
+  <ul class="post-list">
+  {% for post in site.posts %}
+    {% assign words = post.content | number_of_words %}
+    <li class="post-card">
+      <div class="meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time><span class="dot"></span>{{ words | divided_by: 220 | plus: 1 }} min read</div>
+      <h3 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 42 }}</p>
+      <a class="more" href="{{ post.url | relative_url }}">Read the post <span aria-hidden="true">&rarr;</span></a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>

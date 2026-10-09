@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="236" viewBox="0 0 760 236" role="img" aria-labelledby="t d">
+<title id="t">Two R-squared values from the same model and data</title>
+<desc id="d">Random split: R² 0.9978. Trained on winter and tested on the rest of the year: R² 0.5510.</desc>
+<style>text{font-family:Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}.lab{font-size:14px;fill:#374151}.val{font-size:14px;font-weight:600;fill:#1b1f24}.tick{font-size:12px;fill:#6b7280}.axis{font-size:12px;fill:#6b7280}</style>
+<rect x="0.5" y="0.5" width="759" height="235" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<line x1="300.0" y1="44" x2="300.0" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="300.0" y="204" text-anchor="middle">0</text>
+<line x1="394.0" y1="44" x2="394.0" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="394.0" y="204" text-anchor="middle">0.25</text>
+<line x1="488.0" y1="44" x2="488.0" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="488.0" y="204" text-anchor="middle">0.5</text>
+<line x1="582.0" y1="44" x2="582.0" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="582.0" y="204" text-anchor="middle">0.75</text>
+<line x1="676.0" y1="44" x2="676.0" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="676.0" y="204" text-anchor="middle">1</text>
+<text class="axis" x="488.0" y="224" text-anchor="middle">R² on held-out data</text>
+<path d="M300,61.0 H671.2 a4,4 0 0 1 4,4 v10 a4,4 0 0 1 -4,4 H300 Z" fill="#1f4e79"/>
+<text class="val" x="685.2" y="75.0">0.9978</text>
+<text class="lab" x="284" y="75.0" text-anchor="end">Random shuffle of days</text>
+<path d="M300,141.0 H503.2 a4,4 0 0 1 4,4 v10 a4,4 0 0 1 -4,4 H300 Z" fill="#1f4e79"/>
+<text class="val" x="517.2" y="155.0">0.5510</text>
+<text class="lab" x="284" y="147.0" text-anchor="end">Trained on winter,</text>
+<text class="lab" x="284" y="165.0" text-anchor="end">tested on the rest of the year</text>
+<line x1="300" y1="44" x2="300" y2="186" stroke="#9ca3af" stroke-width="1"/>
+</svg>

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign words = content | number_of_words %}
+<article class="post">
+  <header class="post-header">
+    <div class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time><span class="dot"></span>{{ words | divided_by: 220 | plus: 1 }} min read</div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+  </header>
+  {% if page.image %}
+  <figure class="figure hero">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" loading="eager">
+    {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <footer class="post-end">
+    <a class="back" href="{{ '/' | relative_url }}"><span aria-hidden="true">&larr;</span> All writing</a>
+  </footer>
+</article>

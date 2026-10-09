@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Faithful to an Orbit That No Longer Exists"
-date: 2026-10-13
+date: 2026-10-9
 image: /assets/img/kick-rollouts.png
 image_alt: "Three planetary orbits after a kick. The model trained on clean orbits keeps following the old path. The model trained with kicks bends toward the new one."
 image_caption: "Three test orbits after a kick. Each model sees the true history, including three positions after the kick, then predicts on its own. The dashed line is where the old orbit would have gone. The model trained on clean orbits follows it; the model trained with kicks bends toward the new path. Panel a of Figure 4 from the paper."

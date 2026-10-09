@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Probe That Passed Before Training Began"
-date: 2026-10-10
+date: 2026-10-9
 image: /assets/img/probe-controls.png
 image_alt: "Held-out probe error at each site in a small transformer, for two trained models and for an untrained model with the same starting weights. The untrained model is never far behind."
 image_caption: "Held-out probe error at each site in the network, for two trained models and for an untrained model with the same initial weights. Lower is better. The dotted line is a probe fitted on the raw inputs alone. Panels a and b of Figure 7 from the paper."
